@@ -15,15 +15,15 @@ export default function TradeConnectMVP() {
   const HomePage = () => (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Find a Local Tradesperson</h1>
-      <p>Post your job below and we'll connect you with reliable tradespeople near you.</p>
+      <p>Post your job below and we&apos;ll connect you with reliable tradespeople near you.</p>
       
       {formSubmitted && (
         <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-          Job posted successfully! We'll connect you with local tradespeople soon.
+          Job posted successfully! We&apos;ll connect you with local tradespeople soon.
         </div>
       )}
       
-      <div className="space-y-4 bg-white p-4 rounded shadow">
+      <form onSubmit={handleFormSubmit} className="space-y-4 bg-white p-4 rounded shadow">
         <input 
           name="name" 
           placeholder="Your Name" 
@@ -98,12 +98,12 @@ export default function TradeConnectMVP() {
           </p>
         </div>
         <button 
-          onClick={handleFormSubmit}
+          type="submit"
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
         >
           Post Job
         </button>
-      </div>
+      </form>
       
       <p className="text-sm text-center">
         Are you a tradesperson?{' '}
@@ -129,15 +129,15 @@ export default function TradeConnectMVP() {
       </div>
       
       <h1 className="text-2xl font-bold">Join TradeConnect</h1>
-      <p>We're looking for reliable tradespeople across Ireland.</p>
+      <p>We&apos;re looking for reliable tradespeople across Ireland.</p>
       
       {formSubmitted && (
         <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-          Thanks for signing up! We'll be in touch soon with job opportunities.
+          Thanks for signing up! We&apos;ll be in touch soon with job opportunities.
         </div>
       )}
       
-      <div className="space-y-4 bg-white p-4 rounded shadow">
+      <form onSubmit={handleFormSubmit} className="space-y-4 bg-white p-4 rounded shadow">
         <input 
           name="name" 
           placeholder="Full Name" 
@@ -169,12 +169,12 @@ export default function TradeConnectMVP() {
           className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500" 
         />
         <button 
-          onClick={handleFormSubmit}
+          type="submit"
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
         >
           Sign Up
         </button>
-      </div>
+      </form>
     </div>
   );
 
